@@ -27,6 +27,7 @@
   * Sequelize
   * dotenv
   * nodemon
+  * bcrypt
 
   ## Usage
   
