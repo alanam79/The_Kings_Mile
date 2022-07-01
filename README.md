@@ -5,7 +5,7 @@
 
   #### Email Address: 
   * Alana: alanarmckeel@gmail.com
-  * Mary:
+  * Mary: maryleone@rocketcentral.com
   * Matt: 
 
   ## Description
