@@ -8,7 +8,7 @@ Book.init(
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            autoIncremen: true,
+            autoIncrement: true,
             primaryKey: true,
         },
         title: {
