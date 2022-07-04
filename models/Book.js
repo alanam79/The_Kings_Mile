@@ -40,4 +40,4 @@ Book.init(
     }
 );
 
-module.exports = Book
+module.exports = Book;
