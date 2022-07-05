@@ -9,8 +9,8 @@ router.get("/", (req, res) => {
     order: [["created_at", "DESC"]],
     attributes: [
       "id",
-      "book_url",
       "title",
+      "author",
       "created_at",
       [
         sequelize.literal(
@@ -50,8 +50,9 @@ router.get("/:id", (req, res) => {
     order: [["created_at", "DESC"]],
     attributes: [
       "id",
-      "book_url",
       "title",
+      "author",
+      "pages",
       "created_at",
       [
         sequelize.literal(
@@ -93,7 +94,7 @@ router.post("/", (req, res) => {
   // expects {title: 'Taskmaster goes public!', book_url: 'https://taskmaster.com/press', user_id: 1}
   Book.create({
     title: req.body.title,
-    book_url: req.body.book_url,
+    // book_url: req.body.book_url,
     author: req.body.author,
     pages: req.body.pages,
     user_id: req.body.user_id,
