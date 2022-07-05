@@ -1,23 +1,21 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-// create our Post model
+// create our Book model
 class Book extends Model {
   static upvote(body, models) {
     return models.Book.create({
       user_id: body.user_id,
       book_id: body.book_id,
     }).then(() => {
-      return book_id.findOne({
+      return Book.findOne({
         where: {
-          id: body.book,
+          id: body.book_id,
         },
         attributes: [
           "id",
-          "book_url",
+          "url",
           "title",
-          "author",
-          "pages",
           "created_at",
           [
             sequelize.literal(

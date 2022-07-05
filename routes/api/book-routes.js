@@ -9,7 +9,6 @@ router.get("/", (req, res) => {
     order: [["created_at", "DESC"]],
     attributes: [
       "id",
-      "book_url",
       "title",
       "created_at",
       [
@@ -52,6 +51,8 @@ router.get("/:id", (req, res) => {
       "id",
       "book_url",
       "title",
+      "author",
+      "pages",
       "created_at",
       [
         sequelize.literal(
