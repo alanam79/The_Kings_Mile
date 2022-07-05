@@ -1,7 +1,7 @@
-const User = require("./User");
 const Book = require("./Book");
+const User = require("./User");
 const Vote = require("./Vote");
-const Comment = require("./Comments");
+const Comment = require("./Comment");
 
 // create associations
 User.hasMany(Book, {
@@ -56,4 +56,4 @@ Book.hasMany(Comment, {
   foreignKey: "Book_id",
 });
 
-module.exports = { User, Book, Vote, Comment, Book };
+module.exports = { User, Book, Vote, Comment };

@@ -1,7 +1,35 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Book extends Model {}
+// create our Post model
+class Book extends Model {
+  static upvote(body, models) {
+    return models.Book.create({
+      user_id: body.user_id,
+      book_id: body.book_id,
+    }).then(() => {
+      return book_id.findOne({
+        where: {
+          id: body.book,
+        },
+        attributes: [
+          "id",
+          "book_url",
+          "title",
+          "author",
+          "pages",
+          "created_at",
+          [
+            sequelize.literal(
+              "(SELECT COUNT(*) FROM vote WHERE book.id = vote.book_id)"
+            ),
+            "vote_count",
+          ],
+        ],
+      });
+    });
+  }
+}
 
 Book.init(
   {

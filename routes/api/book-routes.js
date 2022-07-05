@@ -94,6 +94,8 @@ router.post("/", (req, res) => {
   Book.create({
     title: req.body.title,
     book_url: req.body.book_url,
+    author: req.body.author,
+    pages: req.body.pages,
     user_id: req.body.user_id,
   })
     .then((dbBookData) => res.json(dbBookData))
