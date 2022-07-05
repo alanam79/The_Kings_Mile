@@ -4,7 +4,7 @@ const sequelize = require("../config/connection");
 // create our Book model
 class Book extends Model {
   static upvote(body, models) {
-    return models.Book.create({
+    return models.Vote.create({
       user_id: body.user_id,
       book_id: body.book_id,
     }).then(() => {
@@ -14,7 +14,6 @@ class Book extends Model {
         },
         attributes: [
           "id",
-          "url",
           "title",
           "created_at",
           [
