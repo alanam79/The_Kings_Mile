@@ -1,20 +1,20 @@
 const router = require("express").Router();
 const sequelize = require("../../config/connection");
-const { Post, User, Vote, Comment } = require("../../models");
+const { Book, User, Vote, Comment } = require("../../models");
 
 // get all users
 router.get("/", (req, res) => {
   // Query configuration
-  Post.findAll({
+  Book.findAll({
     order: [["created_at", "DESC"]],
     attributes: [
       "id",
-      "post_url",
+      "book_url",
       "title",
       "created_at",
       [
         sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)"
+          "(SELECT COUNT(*) FROM vote WHERE book.id = vote.book_id)"
         ),
         "vote_count",
       ],
@@ -23,7 +23,7 @@ router.get("/", (req, res) => {
       // Comment model
       {
         model: Comment,
-        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+        attributes: ["id", "comment_text", "book_id", "user_id", "created_at"],
         include: {
           model: User,
           attributes: ["username"],
@@ -35,7 +35,7 @@ router.get("/", (req, res) => {
       },
     ],
   })
-    .then((dbPostData) => res.json(dbPostData))
+    .then((dbBookData) => res.json(dbBookData))
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
@@ -43,19 +43,19 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  Post.findOne({
+  Book.findOne({
     where: {
       id: req.params.id,
     },
     order: [["created_at", "DESC"]],
     attributes: [
       "id",
-      "post_url",
+      "book_url",
       "title",
       "created_at",
       [
         sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)"
+          "(SELECT COUNT(*) FROM vote WHERE book.id = vote.book_id)"
         ),
         "vote_count",
       ],
@@ -64,7 +64,7 @@ router.get("/:id", (req, res) => {
       // include the Comment model here:
       {
         model: Comment,
-        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+        attributes: ["id", "comment_text", "book_id", "user_id", "created_at"],
         include: {
           model: User,
           attributes: ["username"],
@@ -76,12 +76,12 @@ router.get("/:id", (req, res) => {
       },
     ],
   })
-    .then((dbPostData) => {
-      if (!dbPostData) {
-        res.status(404).json({ message: "No post found with this id" });
+    .then((dbBookData) => {
+      if (!dbBookData) {
+        res.status(404).json({ message: "No book found with this id" });
         return;
       }
-      res.json(dbPostData);
+      res.json(dbBookData);
     })
     .catch((err) => {
       console.log(err);
@@ -90,33 +90,33 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
-  Post.create({
+  // expects {title: 'Taskmaster goes public!', book_url: 'https://taskmaster.com/press', user_id: 1}
+  Book.create({
     title: req.body.title,
-    post_url: req.body.post_url,
+    book_url: req.body.book_url,
     user_id: req.body.user_id,
   })
-    .then((dbPostData) => res.json(dbPostData))
+    .then((dbBookData) => res.json(dbBookData))
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
 });
 
-// PUT /api/posts/upvote
+// PUT /api/books/upvote
 router.put("/upvote", (req, res) => {
-  // custom static method created in models/Post.js
-  Post.upvote(req.body, { Vote })
-    .then((updatedPostData) => res.json(updatedPostData))
+  // custom static method created in models/Book.js
+  Book.upvote(req.body, { Vote })
+    .then((updatedBookData) => res.json(updatedBookData))
     .catch((err) => {
       console.log(err);
       res.status(400).json(err);
     });
 });
 
-// update post by id
+// update book by id
 router.put("/:id", (req, res) => {
-  Post.update(
+  Book.update(
     {
       title: req.body.title,
     },
@@ -126,12 +126,12 @@ router.put("/:id", (req, res) => {
       },
     }
   )
-    .then((dbPostData) => {
-      if (!dbPostData) {
-        res.status(404).json({ message: "No post found with this id" });
+    .then((dbBookData) => {
+      if (!dbBookData) {
+        res.status(404).json({ message: "No book found with this id" });
         return;
       }
-      res.json(dbPostData);
+      res.json(dbBookData);
     })
     .catch((err) => {
       console.log(err);
@@ -140,17 +140,17 @@ router.put("/:id", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-  Post.destroy({
+  Book.destroy({
     where: {
       id: req.params.id,
     },
   })
-    .then((dbPostData) => {
-      if (!dbPostData) {
-        res.status(404).json({ message: "No post found with this id" });
+    .then((dbBookData) => {
+      if (!dbBookData) {
+        res.status(404).json({ message: "No book found with this id" });
         return;
       }
-      res.json(dbPostData);
+      res.json(dbData);
     })
     .catch((err) => {
       console.log(err);
