@@ -5,6 +5,7 @@ const withAuth = require("../utils/auth");
 const { Book, User, Comment } = require("../models");
 
 router.get("/", (req, res) => {
+  console.log(req.session);
   Book.findAll({
     // model: Book attributes pulled in as object
     attributes: [
@@ -48,6 +49,11 @@ router.get("/", (req, res) => {
 });
 
 router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+
   res.render("login");
 });
 
