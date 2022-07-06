@@ -107,15 +107,21 @@ router.post("/", (req, res) => {
     });
 });
 
-// PUT /api/books/upvote
+// PUT /api/books/upvote - only allows a user to vote once per book
 router.put("/upvote", (req, res) => {
-  // custom static method created in models/Book.js
-  Book.upvote(req.body, { Vote })
-    .then((updatedBookData) => res.json(updatedBookData))
-    .catch((err) => {
-      console.log(err);
-      res.status(400).json(err);
-    });
+  // make sure the session exists first
+  if (req.session) {
+    // pass session id along with all destructured properties on req.body
+    Book.upvote(
+      { ...req.body, user_id: req.session.user_id },
+      { Vote, Comment, User }
+    )
+      .then((updatedVoteData) => res.json(updatedVoteData))
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  }
 });
 
 // update book by id
