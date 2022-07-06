@@ -107,7 +107,7 @@ router.post("/", (req, res) => {
     });
 });
 
-// PUT /api/books/upvote
+// PUT /api/books/upvote - only allows a user to vote once per book
 router.put("/upvote", (req, res) => {
   // make sure the session exists first
   if (req.session) {
