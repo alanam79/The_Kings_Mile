@@ -14,16 +14,19 @@
   </div>
 </article>
 
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
+{{! the #if is preventing the comment form and vote button from showing unless logged in }}
+{{#if loggedIn}}
+  <form class="comment-form">
+    <div>
+      <textarea name="comment-body"></textarea>
+    </div>
 
-  <div>
-    <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">like</button>
-  </div>
-</form>
+    <div>
+      <button type="submit">add comment</button>
+      <button type="button" class="upvote-btn">upvote</button>
+    </div>
+  </form>
+{{/if}}
 
 {{! shows the comments entered into the comment box }}
 <div class="comments">
@@ -41,5 +44,8 @@
   {{/each}}
 </div>
 
-<script src="/javascript/comment.js"></script>
-<script src="/javascript/upvote.js"></script>
+{{! only render the comment button and vote button when the user is logged in }}
+{{#if loggedIn}}
+  <script src="/javascript/comment.js"></script>
+  <script src="/javascript/upvote.js"></script>
+{{/if}}

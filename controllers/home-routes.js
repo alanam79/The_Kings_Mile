@@ -40,7 +40,10 @@ router.get("/", (req, res) => {
     .then((dbBookData) => {
       const books = dbBookData.map((book) => book.get({ plain: true }));
       // pass a single book object into the homepage template
-      res.render("homepage", { books });
+      res.render("homepage", {
+        books,
+        loggedIn: req.session.loggedIn,
+      });
     })
     .catch((err) => {
       console.log(err);
@@ -113,7 +116,10 @@ router.get("/book/:id", (req, res) => {
       const book = dbBookData.get({ plain: true });
 
       // pass data to template
-      res.render("single-book", { book });
+      res.render("single-book", {
+        book,
+        loggedIn: req.session.loggedIn,
+      });
     })
     .catch((err) => {
       console.log(err);
