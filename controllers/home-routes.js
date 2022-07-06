@@ -6,7 +6,7 @@ const { Book, User, Comment } = require("../models");
 
 router.get("/", (req, res) => {
   Book.findAll({
-    // model: Book,
+    // model: Book attributes pulled in as object
     attributes: [
       "id",
       "title",
@@ -45,6 +45,10 @@ router.get("/", (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+});
+
+router.get("/login", (req, res) => {
+  res.render("login");
 });
 
 // router.get("/", async (req, res) => {

@@ -7,6 +7,7 @@ router.get("/", (req, res) => {
   // Query configuration
   Book.findAll({
     order: [["created_at", "DESC"]],
+    // list what objects we want to push over to home-routes to show on homepage via home-routes
     attributes: [
       "id",
       "title",
