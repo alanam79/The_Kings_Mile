@@ -1,6 +1,7 @@
-<ol class="book-list">
+<div class="book-list">
+  {{! lists all the books, must remain wrapped in the #each }}
   {{#each books}}
-    <li>
+    <p>
       <article class="book">
         <div class="title">
           {{! <a
@@ -12,7 +13,7 @@
         </div>
         <div class="meta">
           {{vote_count}}
-          point(s) by
+          like(s) by
           {{user.username}}
           on
           {{created_at}}
@@ -22,6 +23,6 @@
           <a href="/book/{{id}}">{{comments.length}} comment(s)</a>
         </div>
       </article>
-    </li>
+    </p>
   {{/each}}
-</ol>
+</div>
