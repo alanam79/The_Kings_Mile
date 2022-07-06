@@ -1,5 +1,9 @@
 const router = require("express").Router();
 const { Comment } = require("../../models");
+const cleanser = require("profanity-cleanser");
+
+// Sets to default locale of en-base for profanity cleanser
+cleanser.setLocale();
 
 router.get("/", (req, res) => {
   Comment.findAll()
@@ -14,7 +18,7 @@ router.post("/", (req, res) => {
   // check the session
   if (req.session) {
     Comment.create({
-      comment_text: req.body.comment_text,
+      comment_text: cleanser.replace(req.body.comment_text),
       user_id: req.body.user_id,
       book_id: req.body.book_id,
       // use the id from the session
