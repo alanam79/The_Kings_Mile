@@ -21,7 +21,6 @@ async function signupFormHandler(event) {
     if (response.ok) {
       // possible ideas: css hide/show or model to alert the sign-up was successful
       console.log("success");
-      alert(response.statusText);
       document.location.replace("/dashboard");
     } else {
       alert(response.statusText);

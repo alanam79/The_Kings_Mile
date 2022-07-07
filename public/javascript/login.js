@@ -51,7 +51,6 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
-      alert(response.statusText);
       console.log("successful log in", response);
       document.location.replace("/dashboard");
     } else {
