@@ -56,4 +56,4 @@ Book.hasMany(Comment, {
   foreignKey: "Book_id",
 });
 
-module.exports = { User, Book, Vote, Comment, Book };
+module.exports = { User, Book, Vote, Comment};
