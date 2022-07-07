@@ -1,0 +1,15 @@
+{{! shows the comments entered into the comment box }}
+<div class="comments">
+  {{#each this}}
+    <section class="comment">
+      <div class="meta">
+        {{user.username}}
+        on
+        {{created_at}}
+      </div>
+      <div class="text">
+        {{comment_text}}
+      </div>
+    </section>
+  {{/each}}
+</div>
