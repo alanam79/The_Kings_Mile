@@ -44,7 +44,7 @@ router.get("/", withAuth, (req, res) => {
     });
 });
 
-router.get("/:id", (req, res) => {
+router.get("/:id", withAuth, (req, res) => {
   Book.findOne({
     where: {
       id: req.params.id,
@@ -92,7 +92,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.post("/", (req, res) => {
+router.post("/", withAuth, (req, res) => {
   // expects {title: 'Taskmaster goes public!', book_url: 'https://taskmaster.com/press', user_id: 1}
   Book.create({
     title: req.body.title,
@@ -109,7 +109,7 @@ router.post("/", (req, res) => {
 });
 
 // PUT /api/books/upvote - only allows a user to vote once per book
-router.put("/upvote", (req, res) => {
+router.put("/upvote", withAuth, (req, res) => {
   // make sure the session exists first
   if (req.session) {
     // pass session id along with all destructured properties on req.body
@@ -126,7 +126,7 @@ router.put("/upvote", (req, res) => {
 });
 
 // update book by id
-router.put("/:id", (req, res) => {
+router.put("/:id", withAuth, (req, res) => {
   Book.update(
     {
       title: req.body.title,
@@ -150,7 +150,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id", withAuth, (req, res) => {
   Book.destroy({
     where: {
       id: req.params.id,
