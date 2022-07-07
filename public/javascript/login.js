@@ -1,34 +1,37 @@
-// sign-up
-async function signupFormHandler(event) {
-  event.preventDefault();
+// // sign-up
+// async function signupFormHandler(event) {
+//   event.preventDefault();
 
-  const username = document.querySelector("#username-signup").value.trim();
-  const email = document.querySelector("#email-signup").value.trim();
-  const password = document.querySelector("#password-signup").value.trim();
+//   const username = document.querySelector("#username-signup").value.trim();
+//   const email = document.querySelector("#email-signup").value.trim();
+//   const password = document.querySelector("#password-signup").value.trim();
 
-  if (username && email && password) {
-    const response = await fetch("/api/users", {
-      method: "post",
-      body: JSON.stringify({
-        username,
-        email,
-        password,
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
+//   if (username && email && password) {
+//     const response = await fetch("/api/users", {
+//       method: "post",
+//       body: JSON.stringify({
+//         username,
+//         email,
+//         password,
+//       }),
+//       headers: { "Content-Type": "application/json" },
+//     });
 
-    // check the response status
-    if (response.ok) {
-      console.log("success");
-    } else {
-      alert(response.statusText);
-    }
-  }
-}
+//     // check the response status
+//     if (response.ok) {
+//       // possible ideas: css hide/show or model to alert the sign-up was successful
+//       console.log("success");
+//       alert(response.statusText);
+//       document.location.replace("/dashboard");
+//     } else {
+//       alert(response.statusText);
+//     }
+//   }
+// }
 
-document
-  .querySelector(".signup-form")
-  .addEventListener("submit", signupFormHandler);
+// document
+//   .querySelector(".signup-form")
+//   .addEventListener("submit", signupFormHandler);
 
 //   login
 async function loginFormHandler(event) {
@@ -48,8 +51,11 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      alert(response.statusText);
+      console.log("successful log in", response);
+      document.location.replace("/dashboard");
     } else {
+      console.log("response failed login", response);
       alert(response.statusText);
     }
   }

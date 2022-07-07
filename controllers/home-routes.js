@@ -5,7 +5,72 @@ const withAuth = require("../utils/auth");
 const { Book, User, Comment } = require("../models");
 
 router.get("/", (req, res) => {
+  res.render("homepage");
   console.log(req.session);
+  // Book.findAll({
+  //   // model: Book attributes pulled in as object
+  //   attributes: [
+  //     "id",
+  //     "title",
+  //     "author",
+  //     "published_date",
+  //     "file_name",
+  //     "pages",
+  //     [
+  //       sequelize.literal(
+  //         "(SELECT COUNT(*) FROM vote WHERE book.id = vote.book_id)"
+  //       ),
+  //       "vote_count",
+  //     ],
+  //   ],
+  //   include: [
+  //     {
+  //       model: Comment,
+  //       attributes: ["id", "comment_text", "book_id", "user_id", "created_at"],
+  //       include: {
+  //         model: User,
+  //         attributes: ["username"],
+  //       },
+  //     },
+  //     {
+  //       model: User,
+  //       attributes: ["username"],
+  //     },
+  //   ],
+  // })
+  //   .then((dbBookData) => {
+  //     const books = dbBookData.map((book) => book.get({ plain: true }));
+  //     // pass a single book object into the homepage template
+  //     res.render("homepage", {
+  //       books,
+  //       loggedIn: req.session.loggedIn,
+  //     });
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //     res.status(500).json(err);
+  //   });
+});
+
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/dashboard");
+    return;
+  }
+
+  res.render("login");
+});
+
+router.get("/signup", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/dashboard");
+    return;
+  }
+
+  res.render("signup");
+});
+
+router.get("/dashboard", withAuth, (req, res) => {
   Book.findAll({
     // model: Book attributes pulled in as object
     attributes: [
@@ -40,7 +105,7 @@ router.get("/", (req, res) => {
     .then((dbBookData) => {
       const books = dbBookData.map((book) => book.get({ plain: true }));
       // pass a single book object into the homepage template
-      res.render("homepage", {
+      res.render("dashboard", {
         books,
         loggedIn: req.session.loggedIn,
       });
@@ -49,15 +114,6 @@ router.get("/", (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-});
-
-router.get("/login", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
-
-  res.render("login");
 });
 
 // testing for below route
@@ -74,7 +130,7 @@ router.get("/login", (req, res) => {
 // };
 
 // show one book
-router.get("/book/:id", (req, res) => {
+router.get("/book/:id", withAuth, (req, res) => {
   Book.findOne({
     where: {
       id: req.params.id,
@@ -155,7 +211,7 @@ router.get("/book/:id", (req, res) => {
 //   }
 // });
 
-router.get("/booklist", (req, res) => {
+router.get("/booklist", withAuth, (req, res) => {
   //book.findname.route //include books for author
 });
 

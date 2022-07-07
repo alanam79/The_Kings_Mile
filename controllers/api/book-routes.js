@@ -1,9 +1,10 @@
 const router = require("express").Router();
 const sequelize = require("../../config/connection");
+const withAuth = require("../../utils/auth");
 const { Book, User, Vote, Comment } = require("../../models");
 
 // get all users
-router.get("/", (req, res) => {
+router.get("/", withAuth, (req, res) => {
   // Query configuration
   Book.findAll({
     order: [["created_at", "DESC"]],
