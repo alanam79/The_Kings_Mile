@@ -1,10 +1,15 @@
 <article class="book">
-  <div class="title">
+  <div class="container">
+    {{#each books}}
+    <img src="/images/{{file_name}}" alt="">
+    <div>
+      <H2>{{title}}</H2>
+      <p>By: {{author}}</p>
+      <p>Number of pages: {{pages}}</p>
+    </div> 
     {{! book_url below }}
     {{!-- <a href="{{book.book_url}}" target="_blank">{{book.title}}</a>
     <span>({{book.book_url}})</span> --}}
-    <div>{{title}} {{author}} {{pages}} {{published_date}}</div>
-    <span>(https://en.wikipedia.org/wiki/It_(novel))</span>
   </div>
   <div class="meta">
     {{vote_count}}
@@ -17,4 +22,5 @@
           we can move to have this go to single page by clicking on image once built }}
     <a href="/book/{{id}}">{{comments.length}} comment(s)</a>
   </div>
+
 </article>
