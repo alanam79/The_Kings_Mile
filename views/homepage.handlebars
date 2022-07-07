@@ -1,28 +1,9 @@
 <div class="book-list">
   {{! lists all the books, must remain wrapped in the #each }}
-  {{#each books}}
+  {{!-- view is under partials in book-info --}}
+    {{#each books as |book|}}
     <p>
-      <article class="book">
-        <div class="title">
-          {{! <a
-            href="https://en.wikipedia.org/wiki/It_(novel)"
-            target="_blank"
-          > }}
-          <div>{{title}} {{author}} {{pages}} {{published_date}}</div>
-          <span>(https://en.wikipedia.org/wiki/It_(novel))</span>
-        </div>
-        <div class="meta">
-          {{vote_count}}
-          like(s) by
-          {{user.username}}
-          on
-          {{created_at}}
-          |
-          {{! below is how the user is routed to the single book, using the <a href="" 
-          we can move to have this go to single page by clicking on image once built }}
-          <a href="/book/{{id}}">{{comments.length}} comment(s)</a>
-        </div>
-      </article>
+      {{> book-info book }}
     </p>
   {{/each}}
 </div>

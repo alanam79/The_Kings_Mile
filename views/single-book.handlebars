@@ -1,18 +1,5 @@
-<article class="book">
-  <div class="title">
-    <a href="{{book.book_url}}" target="_blank">{{book.title}}</a>
-    <span>({{book.book_url}})</span>
-  </div>
-  <div class="meta">
-    {{book.vote_count}}
-    point(s) by
-    {{book.user.username}}
-    on
-    {{book.created_at}}
-    |
-    <a href="/book/{{book.id}}">{{book.comments.length}} comment(s)</a>
-  </div>
-</article>
+{{!-- being called by partial in book-info --}}
+{{> book-info book }}
 
 {{! the #if is preventing the comment form and vote button from showing unless logged in }}
 {{#if loggedIn}}
@@ -28,21 +15,7 @@
   </form>
 {{/if}}
 
-{{! shows the comments entered into the comment box }}
-<div class="comments">
-  {{#each book.comments}}
-    <section class="comment">
-      <div class="meta">
-        {{user.username}}
-        on
-        {{created_at}}
-      </div>
-      <div class="text">
-        {{comment_text}}
-      </div>
-    </section>
-  {{/each}}
-</div>
+{{> comments book.comments}}
 
 {{! only render the comment button and vote button when the user is logged in }}
 {{#if loggedIn}}
