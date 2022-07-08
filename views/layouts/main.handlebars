@@ -12,13 +12,15 @@
     <div class="wrapper">
       <header>
         <h1>
-          <a href="/">The Kings Mile</a>
+          The Kings Mile
         </h1>
         <nav>
           {{#if loggedIn}}
-            <button id="logout" class="btn-no-style">logout</button>
+            <a href="/dashboard">Home</a>
+            <button id="logout" class="btn-no-style">Logout</button>
           {{else}}
             <a href="/login">login</a>
+            <a href="/signup">signup</a>
           {{/if}}
         </nav>
       </header>
@@ -26,7 +28,7 @@
         {{{body}}}
       </main>
       <footer>
-        Thanks for visiting!
+        “The scariest moment is always just before you start.” ― Stephen King
       </footer>
     </div>
     {{#if loggedIn}}
