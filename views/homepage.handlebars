@@ -1,9 +1,9 @@
 <div class="book-list">
   {{! lists all the books, must remain wrapped in the #each }}
   {{!-- view is under partials in book-info --}}
-    {{#each books as |book|}}
+    {{#each books}}
     <p>
-      {{> book-info book }}
+      {{> book-info}}
     </p>
     {{/each}}
 </div>

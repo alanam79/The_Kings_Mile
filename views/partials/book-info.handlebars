@@ -1,4 +1,5 @@
 <section class="book">
+  <a href="/book/{{id}}">
   <div class="card">
     <img src="/images/{{file_name}}" alt="">
     <div class="flex-column justify-center">
@@ -6,14 +7,19 @@
       <p>By: {{author}}</p>
       <p>Pages: {{pages}}</p>
     </div> 
+    <div>
     {{vote_count}}
     like(s) by
     {{user.username}}
     on
     {{created_at}}
-    |
     {{! below is how the user is routed to the single book, using the <a href="" 
           we can move to have this go to single page by clicking on image once built }}
     <a href="/book/{{id}}">{{comments.length}} comment(s)</a>
+    </div> 
   </div>
+  </a>
 </section>
+{{#each books as |book|}}
+{{> single-book }}
+{{/each}}

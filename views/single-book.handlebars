@@ -1,24 +1,38 @@
-{{!-- being called by partial in book-info --}}
-{{> book-info book }}
-
-{{! the #if is preventing the comment form and vote button from showing unless logged in }}
-{{#if loggedIn}}
+<section class="hd-single-book" id="hd-single-book">
+  <div class="card" id="hd-single-card">
+    <img src="/images/{{book.file_name}}" alt="">
+    <div class="flex-row justify-center">
+      <H2>{{book.title}}</H2>
+      <p>By: {{book.author}} <br>
+          Pages: {{book.pages}} <br>
+          {{book.vote_count}} Like(s)
+        </p>
+  </div>
+</section>
+<section>
+{{#if loggedIn}} 
   <form class="comment-form">
+  {{> comments book.comments}}
     <div>
-      <textarea name="comment-body"></textarea>
+      <label for="Comment on this book!"></label>
+      <textarea name="comment-body" class="comment-body" rows="6" cols="85" spellcheck="true"></textarea>
     </div>
-
-    <div>
+    <div class="btn-group">
       <button type="submit">add comment</button>
       <button type="button" class="upvote-btn">upvote</button>
     </div>
   </form>
-{{/if}}
+  {{/if}}
+</section> 
 
-{{> comments book.comments}}
+      {{! the #if is preventing the comment form and vote button from showing unless logged in }}
+   
+
+    
 
 {{! only render the comment button and vote button when the user is logged in }}
 {{#if loggedIn}}
   <script src="/javascript/comment.js"></script>
   <script src="/javascript/upvote.js"></script>
 {{/if}}
+

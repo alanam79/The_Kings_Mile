@@ -83,6 +83,9 @@ router.get("/book/:id", (req, res) => {
       "id",
       // "book_url", left to build in if wanted to set link to amazon purchase
       "title",
+      "author",
+      "file_name",
+      "pages",
       "created_at",
       [
         sequelize.literal(

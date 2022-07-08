@@ -16,6 +16,13 @@ p {
   font-size: 20px;
 }
 
+main{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .book-list {
   display: flex;
   flex-wrap: wrap;
@@ -29,13 +36,17 @@ p {
   margin: 15px;
 }
 
+.hd-single-book {
+  margin: 15px;
+}
+
 .card {
   background-color: rgb(179, 179, 179);
   opacity: 85%;
   box-shadow: 0 4px 8px 0 rgb(252, 159, 41);
   border-radius: 20px;
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -48,4 +59,31 @@ p {
   width: 150px;
   height: 200px;
   margin: .45rem;
+}
+
+#hd-single-card {
+  flex-direction: row;
+  margin: auto;
+  height: 240px;
+  width: 500px;
+  
+}
+
+.comment-form {
+  background-color: rgb(210, 210, 210);
+  margin: auto
+}
+
+.comment-body {
+  resize: none;
+  background:url("..//images/Be-nice.jpg") center no-repeat;
+  border-color: white;
+  opacity: 55%;
+  color: black;
+  overflow: auto;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-evenly;
 }
