@@ -1,13 +1,11 @@
-<article class="book">
-  <div class="container">
+<section class="book">
+  <div class="card">
     <img src="/images/{{file_name}}" alt="">
-    <div>
+    <div class="flex-column justify-center">
       <H2>{{title}}</H2>
       <p>By: {{author}}</p>
-      <p>Number of pages: {{pages}}</p>
+      <p>Pages: {{pages}}</p>
     </div> 
-  </div>
-  <div class="meta">
     {{vote_count}}
     like(s) by
     {{user.username}}
@@ -18,4 +16,4 @@
           we can move to have this go to single page by clicking on image once built }}
     <a href="/book/{{id}}">{{comments.length}} comment(s)</a>
   </div>
-</article>
+</section>

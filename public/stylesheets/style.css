@@ -1,5 +1,9 @@
 body {
   background-image: url(../images/Steven_King-project.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 10%;
+  background-size: cover;
 }
 
 h1 {
@@ -10,4 +14,38 @@ h1 {
 p {
   font-family: verdana;
   font-size: 20px;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
+
+.book{
+  width: 240px;
+  height: 406px;
+  margin: 15px;
+}
+
+.card {
+  background-color: rgb(179, 179, 179);
+  opacity: 85%;
+  box-shadow: 0 4px 8px 0 rgb(252, 159, 41);
+  border-radius: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.card:hover{
+  opacity: 1;
+  box-shadow: 0 4px 8px 0 red;
+}
+
+.card img {
+  width: 150px;
+  height: 200px;
+  margin: .45rem;
 }
