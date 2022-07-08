@@ -8,14 +8,17 @@
       <p>Pages: {{pages}}</p>
     </div> 
     <div>
-    {{vote_count}}
+       {{vote_count}} {{format_plural "Like" vote_count}} and
+    {{!-- {{vote_count}}
     like(s) by
     {{user.username}}
     on
-    {{created_at}}
+    {{created_at}} --}}
+    {{!-- {{format_date created_at}} --}}
+    
     {{! below is how the user is routed to the single book, using the <a href="" 
           we can move to have this go to single page by clicking on image once built }}
-    <a href="/book/{{id}}">{{comments.length}} comment(s)</a>
+    <a href="/book/{{id}}">{{comments.length}} {{format_plural "Comment" comments.length}}</a>
     </div> 
   </div>
   </a>
