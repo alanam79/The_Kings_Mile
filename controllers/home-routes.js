@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
   //     "title",
   //     "author",
   //     "published_date",
-  //     "file_name",
+  //     "book_img",
   //     "pages",
   //     [
   //       sequelize.literal(
@@ -78,7 +78,7 @@ router.get("/dashboard", withAuth, (req, res) => {
       "title",
       "author",
       "published_date",
-      "file_name",
+      "book_img",
       "pages",
       [
         sequelize.literal(
@@ -140,9 +140,10 @@ router.get("/book/:id", withAuth, (req, res) => {
       // "book_url", left to build in if wanted to set link to amazon purchase
       "title",
       "author",
-      "file_name",
+      "book_img",
       "pages",
       "created_at",
+      "published_date",
       [
         sequelize.literal(
           "(SELECT COUNT(*) FROM vote WHERE book.id = vote.book_id)"
@@ -197,7 +198,7 @@ router.get("/book/:id", withAuth, (req, res) => {
 //             "title",
 //             "author",
 //             "published_date",
-//             "file_name",
+//             "book_img",
 //             "pages",
 //           ],
 //         },
