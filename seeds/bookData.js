@@ -82,14 +82,14 @@ const bookdata = [
     title: "Christine",
     author: "Stephen King",
     published_date: "04-29-1983",
-    book_img: "cristine.jpg",
+    book_img: "christine.jpg",
     pages: "526",
   },
   {
     title: "Pet Sematary",
     author: "Stephen King",
     published_date: "11-14-1983",
-    book_img: "pet-semary.jpg",
+    book_img: "pet-sematary.jpg",
     pages: "374",
   },
   {
@@ -292,7 +292,7 @@ const bookdata = [
     title: "The Colorado Kid",
     author: "Stephen King",
     published_date: "10/04/2005",
-    book_img: null,
+    book_img: "kid.jpg",
     pages: "184",
   },
   {
@@ -334,7 +334,7 @@ const bookdata = [
     title: "11/22/63",
     author: "Stephen King",
     published_date: "11/08/2011",
-    book_img: "11/22/63.jpg",
+    book_img: "11-22-63.jpg",
     pages: "849",
   },
   {
@@ -376,7 +376,7 @@ const bookdata = [
     title: "Finders Keepers",
     author: "Stephen King",
     published_date: "06/02/2015 ",
-    book_img: "finders_keepers.jpg",
+    book_img: "finders-keepers.jpg",
     pages: "434",
   },
   {
