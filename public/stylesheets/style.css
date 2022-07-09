@@ -4,11 +4,18 @@ body {
   background-attachment: fixed;
   background-position: 10%;
   background-size: cover;
+  font-family: "Sans Serif";
+  /* min-height: 100vh; */
 }
 
 h1 {
-  color: white;
+  color: red;
   text-align: center;
+  font-family: "Splash", cursive;
+}
+
+h2 {
+  font-family: "Splash", cursive;
 }
 
 p {
@@ -16,11 +23,23 @@ p {
   font-size: 20px;
 }
 
-main{
+main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+}
+
+header {
+  padding: 50;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
 }
 
 .book-list {
@@ -30,7 +49,7 @@ main{
   margin-top: 3rem;
 }
 
-.book{
+.book {
   width: 240px;
   height: 406px;
   margin: 15px;
@@ -50,7 +69,7 @@ main{
   align-items: center;
 }
 
-.card:hover{
+.card:hover {
   opacity: 1;
   box-shadow: 0 4px 8px 0 red;
 }
@@ -58,7 +77,7 @@ main{
 .card img {
   width: 150px;
   height: 200px;
-  margin: .45rem;
+  margin: 0.45rem;
 }
 
 #hd-single-card {
@@ -66,17 +85,16 @@ main{
   margin: auto;
   height: 240px;
   width: 500px;
-  
 }
 
 .comment-form {
   background-color: rgb(210, 210, 210);
-  margin: auto
+  margin: auto;
 }
 
 .comment-body {
   resize: none;
-  background:url("..//images/Be-nice.jpg") center no-repeat;
+  background: url("..//images/Be-nice.jpg") center no-repeat;
   border-color: white;
   opacity: 55%;
   color: black;
@@ -87,3 +105,21 @@ main{
   display: flex;
   justify-content: space-evenly;
 }
+
+/* FOOTER START */
+footer {
+  width: 100%;
+  padding: 40px 35px;
+}
+
+footer {
+  display: inline;
+  font-size: 20px;
+  margin: 0;
+}
+
+footer div {
+  line-height: 1.5;
+  text-align: center;
+}
+/* FOOTER END */
