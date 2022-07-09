@@ -5,12 +5,13 @@
       {{!-- <a href="{{book_url}}" target="_blank">{{title}}</a>
       <span>({{format_url book_url}})</span> --}}
     <div class="flex-row justify-center">
-      <H2>{{book.title}}</H2>
+      <h2>{{book.title}}</h2>
+      {{#if book.published_date}}
+       Published on:{{book.published_date}}
+      {{/if}}
       <p>By: {{book.author}} <br>
           Pages: {{book.pages}} <br>
           {{book.vote_count}} Like(s) <br>
-          
-          {{book.published_date}}
         </p>
   </div>
 </section>
