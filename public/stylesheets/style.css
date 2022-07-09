@@ -109,7 +109,7 @@ a:active {
 
 /* FOOTER START */
 footer {
-  width: 100%;
+  /* width: 100%; */
   padding: 40px 35px;
   color: rgb(184, 15, 15);
 }
