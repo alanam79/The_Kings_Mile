@@ -12,6 +12,7 @@ h1 {
   color: red;
   text-align: center;
   font-family: "Splash", cursive;
+  font-size: 4rem;
 }
 
 h2 {
@@ -117,10 +118,11 @@ footer {
   display: inline;
   font-size: 20px;
   margin: 0;
+  text-shadow: 1px 1px 5px white;
 }
 
 footer div {
   line-height: 1.5;
   text-align: center;
-  }
+}
 /* FOOTER END */
