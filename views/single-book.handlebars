@@ -1,6 +1,6 @@
 <section class="hd-single-book" id="hd-single-book">
   <div class="card" id="hd-single-card">
-    <img src="/images/{{book.file_name}}" alt="">
+    <img src="/images/{{book.book_img}}" alt="">
       {{!-- formats the url --}}
       {{!-- <a href="{{book_url}}" target="_blank">{{title}}</a>
       <span>({{format_url book_url}})</span> --}}
@@ -8,7 +8,9 @@
       <H2>{{book.title}}</H2>
       <p>By: {{book.author}} <br>
           Pages: {{book.pages}} <br>
-          {{book.vote_count}} Like(s)
+          {{book.vote_count}} Like(s) <br>
+          
+          {{book.published_date}}
         </p>
   </div>
 </section>
