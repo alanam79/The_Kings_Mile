@@ -56,6 +56,10 @@ Book.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    purchase_link: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    }
   },
   {
     sequelize,

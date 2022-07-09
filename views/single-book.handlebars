@@ -12,7 +12,14 @@
       <p>By: {{book.author}} <br>
           Pages: {{book.pages}} <br>
           {{book.vote_count}} Like(s) <br>
-        </p>
+      </p>
+      {{#if book.purchase_link}}
+      <p>Want to buy the book click 
+        <a href="https://www.amazon.com{{book.purchase_link}}">Here!</a>
+      </p>
+      {{else}}
+      <p>We could noy find this title for sale on Amazon.</p>
+      {{/if}}
   </div>
 </section>
 <section>

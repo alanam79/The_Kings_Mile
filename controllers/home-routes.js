@@ -144,6 +144,7 @@ router.get("/book/:id", withAuth, (req, res) => {
       "pages",
       "created_at",
       "published_date",
+      "purchase_link",
       [
         sequelize.literal(
           "(SELECT COUNT(*) FROM vote WHERE book.id = vote.book_id)"

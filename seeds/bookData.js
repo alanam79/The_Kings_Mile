@@ -7,6 +7,7 @@ const bookdata = [
     published_date: "04/05/1974",
     book_img: "Carrie.jpg",
     pages: "199",
+    purchase_link: "/dp/0307743667/",
   },
   {
     title: "Salem's Lot",
@@ -14,6 +15,7 @@ const bookdata = [
     published_date: "10/17/1975",
     book_img: "Salem's-Lot.jpg",
     pages: "439",
+    purchase_link: "/dp/0345806794/",
   },
   {
     title: "The Shining",
@@ -21,6 +23,7 @@ const bookdata = [
     published_date: "01/2/1977",
     book_img: "The-Shining.jpg",
     pages: "447",
+    purchase_link: "/dp/0345806786/",
   },
   {
     title: "Rage",
@@ -28,6 +31,7 @@ const bookdata = [
     published_date: "10/3/1978",
     book_img: "Rage.jpg",
     pages: "211",
+    purchase_link: null,
   },
   {
     title: "The Long Walk",
@@ -35,6 +39,7 @@ const bookdata = [
     published_date: null,
     book_img: "long-walk.jpg",
     pages: "384",
+    purchase_link: "/dp/150114426X/",
   },
   {
     title: "The Dead Zone",
@@ -42,6 +47,7 @@ const bookdata = [
     published_date: "08/30/1979",
     book_img: "The-Dead-Zone.jpg",
     pages: "428",
+    purchase_link: "/dp/1501144502/",
   },
   {
     title: "Firestarter",
@@ -49,6 +55,7 @@ const bookdata = [
     published_date: "09/29/1980",
     book_img: "firestarter.jpg",
     pages: "426",
+    purchase_link: "/dp/1501143794/",
   },
   {
     title: "Roadwork",
@@ -56,6 +63,7 @@ const bookdata = [
     published_date: null,
     book_img: "Roadwork.jpg",
     pages: "274",
+    purchase_link: "/dp/1501192213/",
   },
   {
     title: "Cujo",
@@ -63,6 +71,7 @@ const bookdata = [
     published_date: "09/08/1981",
     book_img: "Cujo.jpg",
     pages: "319",
+    purchase_link: "/dp/1501192248/",
   },
   {
     title: "The Running Man",
@@ -70,6 +79,7 @@ const bookdata = [
     published_date: null,
     book_img: "The-Running-Man.jpg",
     pages: "219",
+    purchase_link: "/dp/1501143859/",
   },
   {
     title: "The Dark Tower: The Gunslinger",
@@ -77,6 +87,7 @@ const bookdata = [
     published_date: "06/10/1982",
     book_img: "TDT-gunslinger.jpg",
     pages: "224",
+    purchase_link: "dp/1501143514/",
   },
   {
     title: "Christine",
@@ -84,6 +95,7 @@ const bookdata = [
     published_date: "04-29-1983",
     book_img: "christine.jpg",
     pages: "526",
+    purchase_link: "/dp/1501144189/",
   },
   {
     title: "Pet Sematary",
@@ -91,6 +103,7 @@ const bookdata = [
     published_date: "11-14-1983",
     book_img: "pet-sematary.jpg",
     pages: "374",
+    purchase_link: "/dp/0743412281/",
   },
   {
     title: "Cycle of the Werewolf",
@@ -98,6 +111,7 @@ const bookdata = [
     published_date: null,
     book_img: "werewolf.jpg",
     pages: "127",
+    purchase_link: "/dp/1501177222/",
   },
   {
     title: "The Talisman",
@@ -105,6 +119,7 @@ const bookdata = [
     published_date: null,
     book_img: "talisman.jpg",
     pages: "646",
+    purchase_link: "/dp/1501192272/",
   },
   {
     title: "The Eyes of the Dragon",
@@ -112,6 +127,7 @@ const bookdata = [
     published_date: null,
     book_img: "dragon.jpg",
     pages: "326",
+    purchase_link: "/dp/1501192205/",
   },
   {
     title: "Thinner",
@@ -119,6 +135,7 @@ const bookdata = [
     published_date: "11/19/1984",
     book_img: "thinner.jpg",
     pages: "309",
+    purchase_link: "/dp/1501144529/",
   },
   {
     title: "IT",
@@ -126,6 +143,7 @@ const bookdata = [
     published_date: "09/15/1986",
     book_img: "IT.jpg",
     pages: "1138",
+    purchase_link: "/dp/1982127791/",
   },
   {
     title: "The Dark Tower: The Drawing of the Three",
@@ -133,6 +151,7 @@ const bookdata = [
     published_date: null,
     book_img: "TDT-Three.jpg",
     pages: "400",
+    purchase_link: "/dp/1501143549/",
   },
   {
     title: "Misery",
@@ -140,6 +159,7 @@ const bookdata = [
     published_date: "06/08/1987",
     book_img: "misery.jpg",
     pages: "310",
+    purchase_link: "/dp/1501143107/",
   },
   {
     title: "The Tommyknockers",
@@ -147,6 +167,7 @@ const bookdata = [
     published_date: "11/10/1986",
     book_img: "tommyknockers.jpg",
     pages: "558",
+    purchase_link: "/dp/1501144286/",
   },
   {
     title: "The Dark Half",
@@ -154,6 +175,7 @@ const bookdata = [
     published_date: "10/20/1989",
     book_img: "dark-half.jpg",
     pages: "421",
+    purchase_link: "/dp/1501144197/",
   },
   {
     title: "The Stand",
@@ -161,6 +183,7 @@ const bookdata = [
     published_date: "10/03/1978",
     book_img: "The-Stand.jpg",
     pages: "1152",
+    purchase_link: null,
   },
   {
     title: "The Dark Tower III: The Waste Lands",
@@ -168,6 +191,7 @@ const bookdata = [
     published_date: null,
     book_img: "TDT-wastelands.jpg",
     pages: "512",
+    purchase_link: "/dp/0307947300/",
   },
   {
     title: "Needful Things",
@@ -175,6 +199,7 @@ const bookdata = [
     published_date: null,
     book_img: "needful.jpg",
     pages: "690",
+    purchase_link: "/dp/1501147412/",
   },
   {
     title: "Gerald's Game",
@@ -182,6 +207,7 @@ const bookdata = [
     published_date: null,
     book_img: "game.jpg",
     pages: "352",
+    purchase_link: "/dp/0451176464/",
   },
   {
     title: "Dolores Claiborne",
@@ -189,6 +215,7 @@ const bookdata = [
     published_date: null,
     book_img: "dolores.jpg",
     pages: "305",
+    purchase_link: "/dp/1501143808/",
   },
   {
     title: "Insomnia",
@@ -196,6 +223,7 @@ const bookdata = [
     published_date: "09/15/1994",
     book_img: "insomnia.jpg",
     pages: "787",
+    purchase_link: "/dp/1501144227/",
   },
   {
     title: "Rose Madder",
@@ -203,6 +231,7 @@ const bookdata = [
     published_date: null,
     book_img: "rose.jpg",
     pages: "420",
+    purchase_link: "/dp/1501143689/",
   },
   {
     title: "The Green Mile",
@@ -210,6 +239,7 @@ const bookdata = [
     published_date: "08/29/1996",
     book_img: "The-Green-Mile.jpg",
     pages: "400",
+    purchase_link: "/dp/1501192264/",
   },
   {
     title: "Desperation",
@@ -217,6 +247,7 @@ const bookdata = [
     published_date: "09/24/1996",
     book_img: "desperation.jpg",
     pages: "704",
+    purchase_link: "/dp/0451188462/",
   },
   {
     title: "The Regulators",
@@ -224,6 +255,7 @@ const bookdata = [
     published_date: "09/24/1996",
     book_img: "regulators.jpg",
     pages: "480",
+    purchase_link: "/dp/1501144278/",
   },
   {
     title: "The Dark Tower IV: Wizard and Glass",
@@ -231,6 +263,7 @@ const bookdata = [
     published_date: "11/04/1997",
     book_img: "TDT-glass.jpg",
     pages: "787",
+    purchase_link: "/dp/1501143557/",
   },
   {
     title: "Bag of Bones",
@@ -238,6 +271,7 @@ const bookdata = [
     published_date: "09/22/1998",
     book_img: "bag-of-bones.jpg",
     pages: "529",
+    purchase_link: "/dp/1501198890/",
   },
   {
     title: "The Girl Who Loved Tom Gordon",
@@ -245,6 +279,7 @@ const bookdata = [
     published_date: "04/06/1999",
     book_img: "girl-who.jpg",
     pages: "224",
+    purchase_link: "/dp/1501157515/",
   },
   {
     title: "Dreamcatcher",
@@ -252,6 +287,7 @@ const bookdata = [
     published_date: "02/20/2001",
     book_img: "dreamcatcher.jpg",
     pages: "620",
+    purchase_link: "/dp/1501192221/",
   },
   {
     title: "Black House",
@@ -259,6 +295,7 @@ const bookdata = [
     published_date: "09/15/2001",
     book_img: "black-house.jpg",
     pages: "625",
+    purchase_link: "/dp/1501192299/",
   },
   {
     title: "From a Buick 8",
@@ -266,6 +303,7 @@ const bookdata = [
     published_date: "09/24/2002",
     book_img: "buick.jpg",
     pages: "368",
+    purchase_link: "/dp/1501192191/",
   },
   {
     title: "The Dark Tower V: Wolves of the Calla",
@@ -273,6 +311,7 @@ const bookdata = [
     published_date: "11/04/2003",
     book_img: "TDT-calla.jpg",
     pages: "714",
+    purchase_link: "/dp/0743251628/",
   },
   {
     title: "The Dark Tower VI: Song of Susannah",
@@ -280,6 +319,7 @@ const bookdata = [
     published_date: "06/08/2004",
     book_img: "TDT-susannah.jpg",
     pages: "432",
+    purchase_link: "/dp/0743254554/",
   },
   {
     title: "The Dark Tower VII: The Dark Tower",
@@ -287,6 +327,7 @@ const bookdata = [
     published_date: "09/21/2004",
     book_img: "TDT.jpg",
     pages: "845",
+    purchase_link: "/dp/0743254562/",
   },
   {
     title: "The Colorado Kid",
@@ -294,6 +335,7 @@ const bookdata = [
     published_date: "10/04/2005",
     book_img: "kid.jpg",
     pages: "184",
+    purchase_link: "/dp/1789091551/",
   },
   {
     title: "Cell",
@@ -301,6 +343,7 @@ const bookdata = [
     published_date: "01/24/2006",
     book_img: "cell.jpg",
     pages: "351",
+    purchase_link: "/dp/150112224X/",
   },
   {
     title: "Lisey's Story",
@@ -308,6 +351,7 @@ const bookdata = [
     published_date: "10/24/2006",
     book_img: "lisey.jpg",
     pages: "528",
+    purchase_link: "dp/1982147792/",
   },
   {
     title: "Blaze",
@@ -315,6 +359,7 @@ const bookdata = [
     published_date: "06/12/2007",
     book_img: "blaze.jpg",
     pages: "304",
+    purchase_link: "dp/1501195913/",
   },
   {
     title: "Duma Key",
@@ -322,6 +367,7 @@ const bookdata = [
     published_date: "01/22/2008",
     book_img: "duma.jpg",
     pages: "607",
+    purchase_link: "/dp/1501192256/",
   },
   {
     title: "Under the Dome",
@@ -329,6 +375,7 @@ const bookdata = [
     published_date: "11/10/2009",
     book_img: "dome.jpg",
     pages: "1074",
+    purchase_link: "dp/1439149038/",
   },
   {
     title: "11/22/63",
@@ -336,6 +383,7 @@ const bookdata = [
     published_date: "11/08/2011",
     book_img: "11-22-63.jpg",
     pages: "849",
+    purchase_link: "/dp/1451627297/",
   },
   {
     title: "The Dark Tower: The Wind Through the Keyhole",
@@ -343,6 +391,7 @@ const bookdata = [
     published_date: "02/21/2012",
     book_img: "TDT-keyhole.jpg",
     pages: "336",
+    purchase_link: "/dp/1501166220/",
   },
   {
     title: "Joyland",
@@ -350,6 +399,7 @@ const bookdata = [
     published_date: "06/04/2013",
     book_img: "joyland.jpg",
     pages: "288",
+    purchase_link: "/dp/1781162646/",
   },
   {
     title: "Doctor Sleep",
@@ -357,6 +407,7 @@ const bookdata = [
     published_date: "09/24/2013",
     book_img: "doctor.jpg",
     pages: "531",
+    purchase_link: "/dp/1982131802/",
   },
   {
     title: "Mr. Mercedes",
@@ -364,6 +415,7 @@ const bookdata = [
     published_date: "06/03/2014",
     book_img: "mercedes.jpg",
     pages: "436",
+    purchase_link: "/dp/1476754470/",
   },
   {
     title: "Revival",
@@ -371,6 +423,7 @@ const bookdata = [
     published_date: "11/11/2014",
     book_img: "revival.jpg",
     pages: "403",
+    purchase_link: "/dp/1476770395/",
   },
   {
     title: "Finders Keepers",
@@ -378,6 +431,7 @@ const bookdata = [
     published_date: "06/02/2015 ",
     book_img: "finders-keepers.jpg",
     pages: "434",
+    purchase_link: "/dp/1501190369/",
   },
   {
     title: "End of Watch",
@@ -385,6 +439,7 @@ const bookdata = [
     published_date: "06/07/2016",
     book_img: "watch.jpg",
     pages: "496",
+    purchase_link: "/dp/1501134132/",
   },
   {
     title: "Gwendy's Button Box",
@@ -392,6 +447,7 @@ const bookdata = [
     published_date: "05/16/2017",
     book_img: "button-box.jpg",
     pages: "175",
+    purchase_link: null,
   },
   {
     title: "Sleeping Beauties",
@@ -399,6 +455,7 @@ const bookdata = [
     published_date: "09/26/2017",
     book_img: "sleeping-beauties.jpg",
     pages: "702",
+    purchase_link: "/dp/1473681286/",
   },
   {
     title: "The Outsider",
@@ -406,6 +463,7 @@ const bookdata = [
     published_date: "05/22/2018",
     book_img: "outsider.jpg",
     pages: "576",
+    purchase_link: "/dp/014240733X/",
   },
   {
     title: "Elevation",
@@ -413,6 +471,7 @@ const bookdata = [
     published_date: "10/30/2018",
     book_img: "elevation.jpg",
     pages: "144",
+    purchase_link: "/dp/1982102322/",
   },
   {
     title: "The Institute",
@@ -420,6 +479,7 @@ const bookdata = [
     published_date: "09/10/2019",
     book_img: "institute.jpg",
     pages: "576",
+    purchase_link: "/dp/1982110589/",
   },
   {
     title: "Later",
@@ -427,6 +487,7 @@ const bookdata = [
     published_date: "03/02/2021",
     book_img: "later.jpg",
     pages: "256",
+    purchase_link: "/dp/1789096499/",
   },
   {
     title: "Billy Summers",
@@ -434,6 +495,7 @@ const bookdata = [
     published_date: "08/03/2021",
     book_img: "billy.jpg",
     pages: "528",
+    purchase_link: "/dp/1982173629/",
   },
   {
     title: "Gwendy's Final Task",
@@ -441,6 +503,7 @@ const bookdata = [
     published_date: "02/15/2022",
     book_img: "final-task.jpg",
     pages: "412",
+    purchase_link: "/dp/1982191554/",
   },
  
 ];
