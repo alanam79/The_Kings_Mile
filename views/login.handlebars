@@ -1,15 +1,20 @@
-<form class="login-form">
+<section class="container">
   <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
+  <h2>Login in to see books from Steven King!</h2>
+    <form class="login-form">
+      <div>     
+        <label for="email-login">Email:</label>
+        <input type="text" id="email-login" placeholder="Your email address goes here!" />
+    
+        <label for="password-login">Password:</label>
+        <input type="password" id="password-login" placeholder="Your password goes here!"/>
+      </div>
+      <div>
+        <button type="submit">login</button>
+      </div>
+    </form>
   </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
-</form>
+</section>
+
 
 <script src="/javascript/login.js"></script>
