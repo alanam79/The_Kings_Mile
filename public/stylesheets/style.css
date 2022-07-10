@@ -1,26 +1,51 @@
+
 body {
   background-image: url(../images/Steven_King-project.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 10%;
   background-size: cover;
+  font-family: "Sans Serif";
+  /* min-height: 100vh; */
 }
 
 h1 {
-  color: white;
-  text-align: center;
+  color: rgb(158, 42, 42);
+  text-align: left;
+  font-family: 'Splash', cursive;
+  font-size: 4rem;
+  display: block;
+}
+
+h2 {
+  font-family: "Splash", cursive;
 }
 
 p {
-  font-family: verdana;
+  font-family:'Albert Sans', sans-serif;
   font-size: 20px;
+  line-height: 30px;
 }
 
-main{
+main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+}
+
+header {
+  padding: 50;
+}
+
+
+
+a,
+a:hover,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
 }
 
 .book-list {
@@ -30,7 +55,7 @@ main{
   margin-top: 3rem;
 }
 
-.book{
+.book {
   width: 240px;
   height: 406px;
   margin: 15px;
@@ -43,22 +68,22 @@ main{
 .card {
   background-color: rgb(179, 179, 179);
   opacity: 85%;
-  box-shadow: 0 4px 8px 0 rgb(252, 159, 41);
+  box-shadow: 0 4px 8px 0 rgb(172, 98, 1);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.card:hover{
+.card:hover {
   opacity: 1;
-  box-shadow: 0 4px 8px 0 red;
+  box-shadow: 0 4px 8px 0  rgb(158, 42, 42);
 }
 
 .card img {
   width: 150px;
   height: 200px;
-  margin: .45rem;
+  margin: 0.45rem;
 }
 
 #hd-single-card {
@@ -66,26 +91,204 @@ main{
   margin: auto;
   height: 240px;
   width: 500px;
-  
 }
 
 .comment-form {
   background-color: rgb(210, 210, 210);
-  margin: auto
+  margin: auto;
 }
 
 .comment-body {
   resize: none;
-  background:url("..//images/Be-nice.jpg") center no-repeat;
+  background: url("..//images/Be-nice.jpg") center no-repeat;
   border-color: white;
   opacity: 55%;
   color: black;
   overflow: auto;
 }
 
+
 .btn-group {
   display: flex;
   justify-content: space-evenly;
 }
 
-/* Styles for Login form */
+
+.nav-bar{
+  /* display: flex; */
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  text-align: right;
+}
+
+.btn-no-style{
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Albert Sans', sans-serif;
+  font-weight:300;
+  color:#0f0101;
+  text-align:right;
+  transition: all 0.2s;
+  }
+
+  .btn-no-style:hover{
+  color:#000000;
+  background-color:#FFFFFF;
+  }
+
+/* login form start */
+.login-form {
+  border: 3px solid #f1f1f1;
+  border-radius: 10px;
+  opacity: 90%;
+}
+
+.login-form input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.login-form button {
+  background-color: #0b0c0c;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.login-form .button:hover {
+  opacity: 0.8;
+}
+
+.login-form .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.login-form .container {
+  padding: 16px;
+}
+
+.login-form span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+/* login end */
+
+/* sign-in form start */
+.signup-form {border: 3px solid #f1f1f1;
+  border: 3px solid #f1f1f1;
+  border-radius: 10px;
+  opacity: 90%;
+}
+
+.signup-form input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.signup-form input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.signup-form button {
+  background-color: #0b0c0c;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.signup-form .button:hover {
+  opacity: 0.8;
+}
+
+.signup-form .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.signup-form .container {
+  padding: 16px;
+}
+
+.signup-form span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+/* sign-in form end */
+
+/* FOOTER START */
+footer {
+  width: 100%;
+  padding: 40px 35px;
+  color: rgb(138, 6, 6);
+  position: fixed;
+  text-align: center;
+  font-style: italic;
+ 
+}
+
+footer {
+  display: inline;
+  font-size: 20px;
+  margin: 0;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.815);
+}
+
+footer div {
+  line-height: 1.5;
+  text-align: center;
+}
+/* FOOTER END */

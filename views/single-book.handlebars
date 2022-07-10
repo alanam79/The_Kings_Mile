@@ -10,6 +10,7 @@
           Pages: {{book.pages}} <br>
           {{book.vote_count}} Like(s)
         </p>
+
   </div>
 </section>
 <section>
@@ -21,8 +22,8 @@
       <textarea name="comment-body" class="comment-body" rows="6" cols="85" spellcheck="true"></textarea>
     </div>
     <div class="btn-group">
-      <button type="submit">Comment</button>
-      <button type="button" class="upvote-btn">Like</button>
+      <button type="submit"  class= "btn-no-style">Comment</button>
+      <button type="button" class="btn-no-style">Like</button>
     </div>
   </form>
   {{/if}}
@@ -31,7 +32,7 @@
       {{! the #if is preventing the comment form and vote button from showing unless logged in }}
    
 
-    
+  
 
 {{! only render the comment button and vote button when the user is logged in }}
 {{#if loggedIn}}
