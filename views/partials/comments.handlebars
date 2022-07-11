@@ -2,12 +2,12 @@
 <div class="comments">
   {{#each this}}
     <section class="comment">
-      <div class="meta">
+      <div class="meta" style="font-family: sans-serif">
         {{user.username}}
         on
         {{format_date created_at}}
       </div>
-      <div class="text">
+      <div class="text" style="font-family: sans-serif">
         {{comment_text}}
       </div>
     </section>
