@@ -27,6 +27,8 @@
   * dotenv
   * nodemon
   * bcrypt
+  * CSS
+  * Boostrap
   * profanity cleanser
 
   ## Usage
