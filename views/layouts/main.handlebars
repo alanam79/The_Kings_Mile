@@ -1,4 +1,4 @@
-<html lang="en">
+{{!-- <html lang="en">
 
   <head>
     <meta charset="UTF-8" />
@@ -31,7 +31,51 @@
           {{/if}}
           </div> 
         </nav> --}}
+{{!-- 
+      </header>
+      <main class="main">
+        {{{body}}}
+      </main>
+      <footer>
+        “The scariest moment is always just before you start.” ― Stephen King
+      </footer>
+    </div>
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
+  </body>
 
+</html> --}} 
+
+{{!-- class="nav-bar" --}}
+
+
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Kings Mile</title>
+    {{! faux css template }}
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>
+          The Kings Mile
+        </h1>
+        <nav>
+          {{#if loggedIn}}
+            <a href="/dashboard">Home</a>
+            <button id="logout" class="btn-no-style">Logout</button>
+          {{else}}
+            <a href="/login">login</a>
+            <a href="/signup">signup</a>
+          {{/if}}
+        </nav>
       </header>
       <main class="main">
         {{{body}}}
@@ -46,5 +90,3 @@
   </body>
 
 </html>
-
-{{!-- class="nav-bar" --}}

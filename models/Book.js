@@ -45,10 +45,10 @@ Book.init(
       allowNull: false,
     },
     published_date: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: true,
     },
-    file_name: {
+    book_img: {
       type: DataTypes.STRING,
       allowNull: true,
     },
@@ -56,6 +56,10 @@ Book.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    purchase_link: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    }
   },
   {
     sequelize,
