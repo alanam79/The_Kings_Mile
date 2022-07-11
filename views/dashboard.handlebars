@@ -1,3 +1,16 @@
+
+ <nav> 
+          <div>
+          {{#if loggedIn}}
+            <button id = "home" class= "btn-no-style"> <a href="/dashboard">Home</a></button>
+            <button id="logout" class="btn-no-style">Logout</button>
+          {{else}}
+           <button id = "login" class= "btn-no-style"><a href="/login">Login</a></button>
+            <button id="signup" class="btn-no-style"><a href="/signup">Sign Up</a></button>
+          {{/if}}
+          </div> 
+        </nav>
+
 <div class="book-list">
   {{! lists all the books, must remain wrapped in the #each }}
   {{!-- view is under partials in book-info --}}

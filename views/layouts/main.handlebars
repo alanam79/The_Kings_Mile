@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Kings Mile</title>
-    {{! faux css template }}
+
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,17 +20,17 @@
         <h1>
           <a href="/">The Kings Mile</a> 
         </h1>
-        <nav> 
-          <div class="nav-bar">
+        {{!-- <nav> 
+          <div>
           {{#if loggedIn}}
             <button id = "home" class= "btn-no-style"> <a href="/dashboard">Home</a></button>
             <button id="logout" class="btn-no-style">Logout</button>
           {{else}}
            <button id = "login" class= "btn-no-style"><a href="/login">Login</a></button>
-            <button id="signup" class="btn-no-style"><a href="/signup">Signup</a></button>
+            <button id="signup" class="btn-no-style"><a href="/signup">Sign Up</a></button>
           {{/if}}
           </div> 
-        </nav>
+        </nav> --}}
 
       </header>
       <main class="main">
@@ -46,3 +46,5 @@
   </body>
 
 </html>
+
+{{!-- class="nav-bar" --}}

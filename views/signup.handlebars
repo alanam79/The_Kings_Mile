@@ -1,19 +1,24 @@
+<link rel="stylesheet" href="/stylesheets/signup.css" />
+
 <form class="signup-form">
-  <div>
+  <div class="email-button">
     <label for="username-signup">username:</label>
     <input type="text" id="username-signup" />
   </div>
-  <div>
+  <div class="email-button">
     <label for="email-signup">email:</label>
     <input type="text" id="email-signup" />
   </div>
-  <div>
+  <div class="email-button">
     <label for="password-signup">password:</label>
     <input type="password" id="password-signup" />
   </div>
   <div>
-    <button type="submit">signup</button>
+    <button type="submit" class= "btn-no-style">Create Account</button>
+    <p class="p-seperation">Already have an account?</p>
+    <button id = "login" class="login-again"><a href="/login">Login</a></button>
   </div>
 </form>
 
 <script src="/javascript/signup.js"></script>
+

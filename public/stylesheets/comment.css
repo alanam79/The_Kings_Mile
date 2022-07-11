@@ -1,0 +1,25 @@
+
+
+.comment-form {
+    background-color: rgb(210, 210, 210);
+    margin: auto;
+  }
+  
+  .comment-body {
+    resize: none;
+    background: url("..//images/Be-nice.jpg") center no-repeat;
+    border-color: white;
+    opacity: 55%;
+    color: black;
+    overflow: auto;
+    
+  }
+
+  #hd-single-card {
+    flex-direction: row;
+    margin: auto;
+    height: 240px;
+    width: 500px;
+  }
+  
+  
