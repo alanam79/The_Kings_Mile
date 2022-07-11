@@ -1,8 +1,8 @@
 
-
 .comment-form {
     background-color: rgb(210, 210, 210);
     margin: auto;
+    height: 120px;
   }
   
   .comment-body {
@@ -12,8 +12,8 @@
     opacity: 55%;
     color: black;
     overflow: auto;
-    
   }
+
 
   #hd-single-card {
     flex-direction: row;
