@@ -183,7 +183,7 @@ const bookdata = [
     published_date: "10/03/1978",
     book_img: "The-Stand.jpg",
     pages: "1152",
-    purchase_link: null,
+    purchase_link: "/dp/0307743683",
   },
   {
     title: "The Dark Tower III: The Waste Lands",
