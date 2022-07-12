@@ -1,19 +1,31 @@
 
 .comment-form {
     background-color: rgb(210, 210, 210);
-    margin: auto;
+    margin: 40px;
     height: 300px;
     opacity: .8;
+    width: 750px;
+    padding: 40px;
+    
+  }
+
+  .comment-box{
+    height: 100%;
+    width:75%;
+    margin-left: 500px;
+    padding: 10;
+    text-align: center;
+    opacity: 80%;
   }
   
   .comment-body {
     resize: none;
     background: url("..//images/Be-nice.jpg") center no-repeat;
-    border-color: white;
     position: bottom;
     opacity: 55%;
     color: black;
     overflow: auto;
+
   }
 
 
@@ -88,6 +100,7 @@
   color:#0f0101;
   text-align:right;
   transition: all 0.2s;
+  position: ;
   }
 
   .upvote-btn:hover{
@@ -113,4 +126,15 @@
   .btn-no-style:hover{
   color:#000000;
   background-color:#FFFFFF;
+  }
+
+   /* Change styles for span and cancel button on extra small screens */
+   @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
   }

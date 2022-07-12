@@ -1,0 +1,27 @@
+
+.btn-no-style{
+    position: relative;
+    bottom: 10;
+    left: 355;
+}
+
+.btn-no-style:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+    }
+  
+
+.message{
+    text-align: center;
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: bolder;
+    margin-top: auto;
+    font-family:'Albert Sans', sans-serif;
+}
+
+
+.card-header{
+    line-height: 400;
+}
+

@@ -47,8 +47,9 @@
   }
 
   .btn-no-style{
-    margin: 20px;
-    position: fixed;
+    position: absolute;
+    top:20;
+    right: 5;
   }
 
   
@@ -56,4 +57,6 @@
     font-family:'Albert Sans', sans-serif;
     font-weight: bold;
   }
+  
+
   

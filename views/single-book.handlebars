@@ -19,13 +19,13 @@
         <a href="https://www.amazon.com{{book.purchase_link}}" class="card">Click Here!</a>
       </p>
       {{else}}
-      <p>We could not find this title for sale on Amazon.</p>
+      <p>This book is no longer being published by the author</p>
       {{/if}}
   </div>
 </section>
 
 
-<section>
+<section class="comment-box">
 {{#if loggedIn}} 
   <form class="comment-form">
   {{> comments book.comments}}
