@@ -1,32 +1,43 @@
 
 .comment-form {
-    background-color: rgb(210, 210, 210);
+    /* background-color: rgb(210, 210, 210); */
     margin: 40px;
     height: 300px;
     opacity: .8;
     width: 750px;
     padding: 40px;
-    
-  }
-/* 
-  .comment-box{
-    height: 100%;
-    width:75%;
+    color:rgb(138, 6, 6);
+    font-weight: bolder;
+    font-family:'Albert Sans', sans-serif;
+    align-items: stretch;
+}
+  
+
+ .comments{
+  overflow: auto;
+} 
+
+
+   .comment-box{
+    /* height: 900px;
+    width:75%; */
     margin-left:50px;
     text-align: center;
     opacity: 80%;
-  } */
+    /* overflow:auto; */
+
+  }  
   
   .comment-body {
     resize: none;
-    background: url("..//images/Be-nice.jpg") center no-repeat;
+    /* background: url("..//images/Be-nice.jpg") center no-repeat; */
     position: bottom;
     opacity: 55%;
-    color: black;
+    color:black;
+    font-weight: bolder;
     overflow: auto;
-
+    margin: 10px;
   }
-
 
   #hd-single-card {
     flex-direction: row;
