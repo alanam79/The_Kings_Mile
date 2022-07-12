@@ -1,66 +1,10 @@
-{{!-- 
-<link rel="stylesheet" href="/stylesheets/comment.css" />
-
-
-<section class="hd-single-book" id="hd-single-book">
-  <div class="card" id="hd-single-card">
-    <img src="/images/{{book.book_img}}" alt="">
-      {{!-- formats the url --}}
-      {{!-- <a href="{{book_url}}" target="_blank">{{title}}</a>
-      <span>({{format_url book_url}})</span> --}}
-    {{!-- <div class="flex-row justify-center">
-      <H2>{{book.title}}</H2>
-      <p>By: {{book.author}} <br>
-          Pages: {{book.pages}} <br>
-          {{book.vote_count}} Like(s)
-        </p> --}}
-
-  {{!-- </div>
-</section>
-<section>
-{{#if loggedIn}} 
-  <form class="comment-form">
-  {{> comments book.comments}}
-    <div>
-      <label for="Comment on this book!"></label>
-      <textarea name="comment-body" class="comment-body" rows="6" cols="85" spellcheck="true"></textarea>
-    </div>
-    <div class="btn-group">
-      <button type="submit"  class= "btn-no-style">Comment</button>
-      <button type="button" class="btn-no-style">Like</button>
-    </div>
-  </form>
-  {{/if}}
-</section> 
-
-      {{! the #if is preventing the comment form and vote button from showing unless logged in }}
-   
-
-  
-
-{{! only render the comment button and vote button when the user is logged in }}
-{{#if loggedIn}}
-  <script src="/javascript/comment.js"></script>
-  <script src="/javascript/upvote.js"></script>
-{{/if}} --}} 
-
-
-
-
 <link rel="stylesheet" href="/stylesheets/single-book.css" />
 <section class="hd-single-book" id="hd-single-book">
+
+
   <div class="card" id="hd-single-card">
     <img src="/images/{{book.book_img}}" alt="">
-      {{!-- formats the url --}}
-      {{!-- <a href="{{book_url}}" target="_blank">{{title}}</a>
-      <span>({{format_url book_url}})</span> --}}
-    <div class="flex-row justify-center">
-      <h2>{{book.title}}</h2>
-      {{#if book.published_date}}
-       Published on:{{book.published_date}}
-      {{/if}}
-      <p>By: {{book.author}} <br>
-          Pages: {{book.pages}} <br>
+
     <div class="flex-row justify-center">
       <h2>{{book.title}}</h2>
       {{#if book.published_date}}
@@ -71,14 +15,16 @@
           {{book.vote_count}} Like(s) <br>
       </p>
       {{#if book.purchase_link}}
-      <p>Want to buy the book click 
-        <a href="https://www.amazon.com{{book.purchase_link}}">Here!</a>
+      <p>Want to buy the book?
+        <a href="https://www.amazon.com{{book.purchase_link}}" class="card">Click Here!</a>
       </p>
       {{else}}
-      <p>We could noy find this title for sale on Amazon.</p>
+      <p>We could not find this title for sale on Amazon.</p>
       {{/if}}
   </div>
 </section>
+
+
 <section>
 {{#if loggedIn}} 
   <form class="comment-form">
@@ -88,17 +34,16 @@
       <textarea name="comment-body" class="comment-body" rows="6" cols="85" spellcheck="true"></textarea>
     </div>
     <div class="btn-group">
-      <button type="submit">Comment</button>
+      <button type="submit" class= "btn-no-style">Comment</button>
       <button type="button" class="upvote-btn">Like</button>
+      <button id = "home" class= "btn-no-style"> <a href="/dashboard">Back to Library</a></button>
     </div>
   </form>
   {{/if}}
 </section> 
 
-      {{! the #if is preventing the comment form and vote button from showing unless logged in }}
+{{! the #if is preventing the comment form and vote button from showing unless logged in }}
    
-
-    
 
 {{! only render the comment button and vote button when the user is logged in }}
 {{#if loggedIn}}

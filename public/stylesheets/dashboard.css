@@ -1,0 +1,59 @@
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+  }
+  
+  .book {
+    width: 340px;
+    height: 506px;
+    margin: 15px;
+    display: flex;
+    white-space: wrap;
+    text-align: center;
+   
+  }
+  
+  
+  .hd-single-book {
+    margin: 15px;
+    
+  }
+  
+  .card {
+    background-color: rgb(179, 179, 179);
+    opacity:85%;
+    box-shadow: 0 4px 8px 0 rgb(139, 138, 136);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    white-space: wrap;
+   
+  }
+  
+  .card:hover {
+    opacity: 1;
+    box-shadow: 0 4px 8px 0  rgb(112, 6, 6);
+  }
+  
+  .card img {
+    width: 150px;
+    height: 200px;
+    margin: 0.45rem;
+  }
+
+  .btn-no-style{
+    margin: 20px;
+    position: fixed;
+  }
+
+  
+  .voting-links{
+    font-family:'Albert Sans', sans-serif;
+    font-weight: bold;
+  }
+  

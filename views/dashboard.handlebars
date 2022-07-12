@@ -1,8 +1,9 @@
 
- <nav> 
-          <div>
+<link rel="stylesheet" href="/stylesheets/dashboard.css" />
+<div>
+      <nav> 
+           <div>
           {{#if loggedIn}}
-            {{!-- <button id = "home" class= "btn-no-style"> <a href="/dashboard">Home</a></button> --}}
             <button id="logout" class="btn-no-style">Logout</button>
           {{else}}
            <button id = "login" class= "btn-no-style"><a href="/login">Login</a></button>
@@ -20,4 +21,4 @@
     </p>
   {{/each}}
 </div>
-
+</div>

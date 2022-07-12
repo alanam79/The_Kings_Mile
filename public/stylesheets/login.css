@@ -1,10 +1,10 @@
-/* login form start  */
 
-h2 {
-font-family:'Albert Sans', sans-serif;
-border-radius: 10px;
-text-align: center;
-}
+  h2 {
+    font-family:'Albert Sans', sans-serif;
+    border-radius: 10px;
+    text-align: center;
+
+  }
 
 
 .login-form {
@@ -23,6 +23,7 @@ text-align: center;
     border: 1px solid #ccc;
     box-sizing: border-box;
     font-family:'Albert Sans', sans-serif;
+    opacity: 0.6;
    
   }
   
@@ -37,7 +38,7 @@ text-align: center;
     text-align: center;
   }
   
-  .login-form .button:hover {
+  .login-form button:hover {
     opacity: 0.8;
   }
   
@@ -60,12 +61,21 @@ text-align: center;
   .email-button{
     font-family:'Albert Sans', sans-serif;
     font-size: large;
+    font-weight: bold;
+    color: rgb(100, 14, 14);
+  }
+
+  .login-again{
+    font-family:'Albert Sans', sans-serif;
+    font-size: large;
   }
 
   .p-seperation{
     font-family:'Albert Sans', sans-serif;
     text-align: center;
     padding: none;
+    color: rgb(100, 14, 14);
+    font-weight: bold;
   }
 
   /* Change styles for span and cancel button on extra small screens */
@@ -79,8 +89,6 @@ text-align: center;
     }
   }
 
-
-  /* login end
 
 
  
