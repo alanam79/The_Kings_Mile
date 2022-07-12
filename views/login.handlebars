@@ -1,25 +1,28 @@
-<form class="login-form">
-  <div>
-    <label for="email-login"><h5>Email:</h5></label>
-    <input type="text" id="email-login" />
-  </div>
-  <div>
-    <label for="password-login"><h5>Password:</h5></label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">Login</button>
-    {{! below is the remember me box and cancel button }}
-    {{! <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
+<link rel="stylesheet" href="/stylesheets/login.css" />
+<script src="/javascript/login.js"></script>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div> }}
+<section class="container">
+  <div>
+  <h2>Join the community to rate Steven King books and <br>
+    connect with the other Constant Readers</h2>
+    <form class="login-form">
+      <div class="email-button">     
+        <label for="email-login">Email:</label>
+        <input type="text" id="email-login" placeholder="Your email address goes here!" />
+      
+
+        <label for="password-login">Password:</label>
+        <input type="password" id="password-login" placeholder="Your password goes here!"/>
+      </div>
+      <div>
+        <button type="submit" class="login-again"><a href="/login">Login</button>
+        <p class="p-seperation">or</p>
+        <button type="submit" class="login-again"><a href="/signup">Create Account</button>
+      </div>
+    </form>
   </div>
-</form>
+</section>
+
+
 
 <script src="/javascript/login.js"></script>
