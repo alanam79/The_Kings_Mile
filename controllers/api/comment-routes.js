@@ -16,6 +16,24 @@ router.get("/", withAuth, (req, res) => {
 });
 
 router.post("/", withAuth, (req, res) => {
+  // TODO: future development to make upper case swear words lowercase so cleanser can pick them up
+  // TODO: work on the cleanser to make it handle upper case and lower case words due to any upper case letter in the 
+  // swear word for example: aSs will get around the cleanser and show in the comments
+  // this is an open sourced package and can be worked on by our team
+  
+  // let comment = req.body.comment_text;
+  // console.log("comment before filtering", comment);
+
+  // if (/[A-Z]/.test(comment)) {
+  //   console.log("this has an uppercase letter ");
+  //   let lowerCaseComment = comment.toLowerCase();
+  //   let noCurse = cleanser.replace(lowerCaseComment);
+  //   console.log("NO CURSEEEE", noCurse);
+  // } else {
+  //   console.log("lowercase all day");
+  // }
+  // let practice = cleanser.replace(req.body.comment_text);
+
   // check the session
   if (req.session) {
     Comment.create({
