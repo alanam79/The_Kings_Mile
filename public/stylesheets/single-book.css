@@ -8,15 +8,14 @@
     padding: 40px;
     
   }
-
+/* 
   .comment-box{
     height: 100%;
     width:75%;
-    margin-left: 500px;
-    padding: 10;
+    margin-left:50px;
     text-align: center;
     opacity: 80%;
-  }
+  } */
   
   .comment-body {
     resize: none;
@@ -100,7 +99,6 @@
   color:#0f0101;
   text-align:right;
   transition: all 0.2s;
-  position: ;
   }
 
   .upvote-btn:hover{
