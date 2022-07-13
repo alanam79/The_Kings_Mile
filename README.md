@@ -15,7 +15,7 @@
   * [Usage](#usage)
   * [Contributors](#contributors)
   * [Website](#website)
-  * [Screenshots](#screenshots)
+  * [Screenshot](#screenshot)
   * [Questions](#questions)
   * [License](#license)
   * [Special Thanks](#special-thanks)
@@ -42,7 +42,8 @@
   # Website
   https://the-kings-mile.herokuapp.com/
 
-  ## Screenshots
+  ## Screenshot
+  [![Screenshot-2022-07-13-181533.jpg](https://i.postimg.cc/vB39zcH6/Screenshot-2022-07-13-181533.jpg)](https://postimg.cc/wyR7xxN6)
 
   ## Questions
   For additional questions and/or information, please go to the creator's Github at: github.com/Project Two, or email one of the above contributors.
