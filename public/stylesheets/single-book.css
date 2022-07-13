@@ -1,41 +1,36 @@
-
 .comment-form {
-    background-color: rgb(210, 210, 210);
-    margin: 40px;
-    height: 300px;
-    opacity: .8;
-    width: 750px;
-    padding: 40px;
-    
-  }
-/* 
-  .comment-box{
-    height: 100%;
-    width:75%;
+  background-color: rgb(210, 210, 210);
+  margin: 40px;
+  height: auto;
+  opacity: 0.8;
+  width: 750px;
+  padding: 40px;
+}
+
+/* .comment-box {
+  min-height: auto !important; */
+/* width:75%;
     margin-left:50px;
     text-align: center;
-    opacity: 80%;
-  } */
-  
-  .comment-body {
-    resize: none;
-    background: url("..//images/Be-nice.jpg") center no-repeat;
-    position: bottom;
-    opacity: 55%;
-    color: black;
-    overflow: auto;
+    opacity: 80%; */
+/* } */
 
-  }
+.comment-body {
+  resize: none;
+  background: url("..//images/Be-nice.jpg") center no-repeat;
+  position: bottom;
+  opacity: 55%;
+  color: black;
+  overflow: auto;
+}
 
-
-  #hd-single-card {
-    flex-direction: row;
-    margin: auto;
-    height: 340px;
-    width: 500px;
-    text-align: center;
-  }
-  
+#hd-single-card {
+  flex-direction: row;
+  margin: auto;
+  height: 340px;
+  width: 500px;
+  text-align: center;
+}
 
 .book-list {
   display: flex;
@@ -51,18 +46,15 @@
   display: flex;
   white-space: wrap;
   text-align: center;
- 
 }
-
 
 .hd-single-book {
   margin: 15px;
-  
 }
 
 .card {
   background-color: rgb(179, 179, 179);
-  opacity:85%;
+  opacity: 85%;
   box-shadow: 0 4px 8px 0 rgb(139, 138, 136);
   border-radius: 20px;
   display: flex;
@@ -71,12 +63,11 @@
   width: 100%;
   white-space: wrap;
   text-align: center;
- 
 }
 
 .card:hover {
   opacity: 1;
-  box-shadow: 0 4px 8px 0  rgb(112, 6, 6);
+  box-shadow: 0 4px 8px 0 rgb(112, 6, 6);
 }
 
 .card img {
@@ -86,53 +77,53 @@
   padding: 50px;
 }
 
-.upvote-btn{
-  display:inline-block;
-  padding:0.35em 1.2em;
-  border:0.1em solid #FFFFFF;
-  margin:0 0.3em 0.3em 0;
-  border-radius:0.12em;
+.upvote-btn {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
   box-sizing: border-box;
-  text-decoration:none;
-  font-family:'Albert Sans', sans-serif;
-  font-weight:300;
-  color:#0f0101;
-  text-align:right;
+  text-decoration: none;
+  font-family: "Albert Sans", sans-serif;
+  font-weight: 300;
+  color: #0f0101;
+  text-align: right;
   transition: all 0.2s;
-  }
+}
 
-  .upvote-btn:hover{
-    color:#000000;
-    background-color:#FFFFFF;
-    }
+.upvote-btn:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
 
-.btn-no-style{
-  display:inline-block;
-  padding:0.35em 1.2em;
-  border:0.1em solid #FFFFFF;
-  margin:0 0.3em 0.3em 0;
-  border-radius:0.12em;
+.btn-no-style {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
   box-sizing: border-box;
-  text-decoration:none;
-  font-family:'Albert Sans', sans-serif;
-  font-weight:300;
-  color:#0f0101;
-  text-align:right;
+  text-decoration: none;
+  font-family: "Albert Sans", sans-serif;
+  font-weight: 300;
+  color: #0f0101;
+  text-align: right;
   transition: all 0.2s;
-  }
+}
 
-  .btn-no-style:hover{
-  color:#000000;
-  background-color:#FFFFFF;
-  }
+.btn-no-style:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
 
-   /* Change styles for span and cancel button on extra small screens */
-   @media screen and (max-width: 300px) {
-    span.psw {
-      display: block;
-      float: none;
-    }
-    .cancelbtn {
-      width: 100%;
-    }
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
   }
+  .cancelbtn {
+    width: 100%;
+  }
+}
