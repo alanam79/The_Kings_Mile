@@ -29,7 +29,7 @@
   * nodemon
   * bcrypt
   * CSS
-  * Boostrap
+  * Bootstrap
   * profanity cleanser
 
   ## Usage
